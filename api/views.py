@@ -32,6 +32,22 @@ class Home(APIView):
             return Response(serializer.data)
         except:
             return Response({'data not avalable'})
+     
+    # def post(self,request):
+    #     blog_list = []
+    #
+    #     blog = Blog.objects.all()
+    #     for x in blog:
+    #
+    #         data = {
+    #             'title':x.title,
+    #             'dis':x.description,
+    #             'image':request.build_absolute_uri(x.image.url)
+    #         }
+    #
+    #         blog_list.append(data)
+    #     return Response(blog_list)
+
 
 
 class AddBlog(APIView):
